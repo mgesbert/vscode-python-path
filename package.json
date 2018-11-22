@@ -1,0 +1,35 @@
+{
+    "name": "copy-python-path",
+    "displayName": "Copy Python Path",
+    "description": "Copy python path for current file.",
+    "version": "0.0.2",
+    "publisher": "mgesbert",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.copyPythonPath"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.copyPythonPath",
+            "title": "Copy Python Path"
+        }]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42",
+        "clipboardy": "^1.2.3"
+    }
+}
