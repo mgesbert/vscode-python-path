@@ -31,7 +31,7 @@ function getPythonPath(path) {
 
 function activate(context) {
   let disposable = vscode.commands.registerCommand(
-    "extension.copyPythonPath",
+    "extension.PythonPath",
     function(uri) {
       try {
         const path = uri

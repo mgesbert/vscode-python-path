@@ -1,7 +1,7 @@
 {
-  "name": "copy-python-path",
-  "displayName": "Copy Python Path",
-  "description": "Copy python path for current file.",
+  "name": "python-path",
+  "displayName": "Python Path",
+  "description": "python path for current file.",
   "version": "0.0.2",
   "publisher": "mgesbert",
   "engines": {
@@ -11,21 +11,21 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.copyPythonPath"
+    "onCommand:extension.pythonPath"
   ],
   "main": "./extension",
   "contributes": {
     "commands": [
       {
         "when": "resourceLangId == python",
-        "command": "extension.copyPythonPath",
-        "title": "Copy Python Path"
+        "command": "extension.pythonPath",
+        "title": "Python Path"
       }
     ],
     "menus": {
       "explorer/context": [{
           "when": "resourceLangId == python",
-          "command": "extension.copyPythonPath",
+          "command": "extension.pythonPath",
           "group": "5_cutcopypaste@3"
     }]
   },
