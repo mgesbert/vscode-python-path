@@ -21,7 +21,13 @@
         "command": "extension.copyPythonPath",
         "title": "Copy Python Path"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [{
+          "when": "resourceLangId == python",
+          "command": "extension.copyPythonPath",
+          "group": "5_cutcopypaste@3"
+    }]
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
