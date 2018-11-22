@@ -32,11 +32,12 @@ function getPythonPath(path) {
 function activate(context) {
   let disposable = vscode.commands.registerCommand(
     "extension.copyPythonPath",
-    function() {
+    function(uri) {
       try {
-        const pythonPath = getPythonPath(
-          vscode.window.activeTextEditor.document.fileName
-        );
+        const path = uri
+          ? uri.fsPath
+          : vscode.window.activeTextEditor.document.fileName;
+        const pythonPath = getPythonPath(path);
         if (pythonPath) {
           clipboardy.writeSync(pythonPath);
         }
@@ -45,8 +46,10 @@ function activate(context) {
       }
     }
   );
+
   context.subscriptions.push(disposable);
 }
+
 exports.activate = activate;
 
 function deactivate() {}
