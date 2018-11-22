@@ -4,7 +4,7 @@
 
 - [x] Copy python path of current file from command
 - [x] Copy python path of current file from contextual menu
-- [ ] Copy python path of a file from explorer
+- [x] Copy python path of a file from explorer
 - [ ] Generate import line for a class
 - [ ] Generate import line for a module
 

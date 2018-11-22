@@ -29,24 +29,25 @@ function getPythonPath(path) {
   return pythonPath.join(".");
 }
 
+function copyPythonPath(uri) {
+  try {
+    const path = uri
+      ? uri.fsPath
+      : vscode.window.activeTextEditor.document.fileName;
+    const pythonPath = getPythonPath(path);
+    if (pythonPath) {
+      clipboardy.writeSync(pythonPath);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function activate(context) {
   let disposable = vscode.commands.registerCommand(
-    "extension.PythonPath",
-    function(uri) {
-      try {
-        const path = uri
-          ? uri.fsPath
-          : vscode.window.activeTextEditor.document.fileName;
-        const pythonPath = getPythonPath(path);
-        if (pythonPath) {
-          clipboardy.writeSync(pythonPath);
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    }
+    "extension.pythonPath",
+    copyPythonPath
   );
-
   context.subscriptions.push(disposable);
 }
 
