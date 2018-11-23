@@ -1,6 +1,8 @@
 {
   "activationEvents": [
-    "onCommand:extension.copyPythonPath"
+    "onLanguage:python",
+    "onCommand:extension.copyPythonPath",
+    "onCommand:extension.generateImportStatement"
   ],
   "categories": [
     "Other"
