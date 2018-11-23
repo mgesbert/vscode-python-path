@@ -1,6 +1,6 @@
 {
   "activationEvents": [
-    "onCommand:extension.pythonPath"
+    "onCommand:extension.copyPythonPath"
   ],
   "categories": [
     "Other"
@@ -8,7 +8,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.pythonPath",
+        "command": "extension.copyPythonPath",
         "title": "Copy Python Path",
         "when": "resourceLangId == python"
       }
@@ -24,15 +24,15 @@
     "menus": {
       "editor/context": [
         {
-          "command": "extension.pythonPath",
-          "group": "9_cutcopypaste@4",
+          "command": "extension.copyPythonPath",
+          "group": "9_cutcopypaste@3",
           "title": "Copy Python Path",
           "when": "resourceLangId == python"
         }
       ],
       "explorer/context": [
         {
-          "command": "extension.pythonPath",
+          "command": "extension.copyPythonPath",
           "group": "5_cutcopypaste@3",
           "title": "Copy Python Path",
           "when": "resourceLangId == python"

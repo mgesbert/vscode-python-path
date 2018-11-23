@@ -45,7 +45,7 @@ function copyPythonPath(uri) {
 
 function activate(context) {
   let disposable = vscode.commands.registerCommand(
-    "extension.pythonPath",
+    "extension.copyPythonPath",
     copyPythonPath
   );
   context.subscriptions.push(disposable);
