@@ -51,6 +51,7 @@
   "engines": {
     "vscode": "^1.22.0"
   },
+  "icon": "images/icon.jpg",
   "main": "./extension",
   "name": "python-path",
   "publisher": "mgesbert",
