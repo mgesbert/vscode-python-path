@@ -1,14 +1,48 @@
 # Python Path
 
-## Features:
+This extension adds a single command, "Copy Python Path", which copies the python path of the current file to the clipboard.
 
-- [x] Copy python path of current file from command
-- [x] Copy python path of current file from contextual menu
-- [x] Copy python path of a file from explorer
-- [x] Generate import line for a class
-- [x] Generate import line for several classes
-- [x] Generate import line for a module
+## Features
+
+Accessible from:
+
+- Command
+- Explorer contextual menu
+- Edit contextual menu
+
+### Basic Copy Python Path
+
+Copies the full module name of the current file to the clipboard.
+
+![Basic Copy Python Path](https://raw.githubusercontent.com/mgesbert/vscode-python-path/master/images/readme_1.gif)
+
+### Generate import statement
+
+Copies an import statement for the selected text to the clipboard.
+In case of a simple selection, the generated statement will be:
+
+```
+from module.name import selected_text
+```
+
+In case of a multiple selection, the generated statement will be:
+
+```
+from module.name import (
+    selected_text_1,
+    selected_text_2,
+    [...]
+    selected_text_n,
+)
+```
+
+![Generate import statement](https://raw.githubusercontent.com/mgesbert/vscode-python-path/master/images/readme_2.gif)
 
 ## Miscellaneous
 
 Inspiration from the Sublime Package: https://github.com/Mimino666/SublimeText2-python-package-to-clipboard
+
+## Credits
+
+- https://github.com/mgesbert
+- https://github.com/nfau
