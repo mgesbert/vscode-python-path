@@ -27,7 +27,7 @@
       "editor/context": [
         {
           "command": "extension.copyPythonPath",
-          "group": "9_cutcopypaste@3",
+          "group": "9_cutcopypaste@30000",
           "title": "Copy Python Path",
           "when": "resourceLangId == python"
         }
@@ -35,7 +35,7 @@
       "explorer/context": [
         {
           "command": "extension.copyPythonPath",
-          "group": "5_cutcopypaste@3",
+          "group": "5_cutcopypaste@30000",
           "title": "Copy Python Path",
           "when": "resourceLangId == python"
         }
