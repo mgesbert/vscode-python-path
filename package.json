@@ -15,14 +15,6 @@
         "when": "resourceLangId == python"
       }
     ],
-    "devDependencies": {
-      "@types/mocha": "^2.2.42",
-      "@types/node": "^7.0.43",
-      "clipboardy": "^1.2.3",
-      "eslint": "^4.11.0",
-      "typescript": "^2.6.1",
-      "vscode": "^1.1.6"
-    },
     "menus": {
       "editor/context": [
         {
@@ -40,11 +32,21 @@
           "when": "resourceLangId == python"
         }
       ]
-    },
-    "scripts": {
-      "postinstall": "node ./node_modules/vscode/bin/install",
-      "test": "node ./node_modules/vscode/bin/test"
     }
+  },
+  "dependencies": {
+    "clipboardy": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "eslint": "^4.11.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6"
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
   },
   "description": "python path for current file.",
   "displayName": "Python Path",
@@ -59,5 +61,5 @@
     "type": "git",
     "url": "https://github.com/mgesbert/vscode-python-path.git"
   },
-  "version": "0.0.2"
+  "version": "0.0.4"
 }
