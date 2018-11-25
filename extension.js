@@ -1,9 +1,10 @@
 const vscode = require("vscode");
 const fs = require("fs");
 const clipboardy = require("clipboardy");
+const path = require("path");
 
-function getPythonPath(path) {
-  const splittedPath = path.split("/");
+function getPythonPath(filePath) {
+  const splittedPath = filePath.split(path.sep);
   if (
     splittedPath.length === 0 ||
     !splittedPath[splittedPath.length - 1].endsWith(".py")
@@ -21,7 +22,7 @@ function getPythonPath(path) {
 
   while (
     splittedPath.length > 0 &&
-    fs.existsSync([...splittedPath, ["__init__.py"]].join("/"))
+    fs.existsSync([...splittedPath, ["__init__.py"]].join(path.sep))
   ) {
     pythonPath.unshift(splittedPath.pop());
   }
@@ -31,10 +32,10 @@ function getPythonPath(path) {
 
 function copyPythonPath(uri) {
   try {
-    const path = uri
+    const filePath = uri
       ? uri.fsPath
       : vscode.window.activeTextEditor.document.fileName;
-    const pythonPath = getPythonPath(path);
+    const pythonPath = getPythonPath(filePath);
     const selections = vscode.window.activeTextEditor.selections
       .map(s => vscode.window.activeTextEditor.document.getText(s))
       .filter(s => !!s);
