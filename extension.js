@@ -52,7 +52,7 @@ function copyPythonPath(uri) {
 }
 
 function generateImportStatement(pythonPath, selections) {
-  let importPath;
+  let importPath = "";
   if (selections.length == 0) {
     importPath = `import ${pythonPath}`;
   } else if (selections.length == 1) {
