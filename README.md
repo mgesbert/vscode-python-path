@@ -1,14 +1,14 @@
 # Python Path
 
-This extension adds a single command, "Copy Python Path", which copies the python path of the current file to the clipboard.
+This extension adds a set of tools which help you generate internal import statements in a python project.
 
 ## Features
 
-Accessible from:
+"Copy Python Path" is accessible from:
 
 - Command
 - Explorer contextual menu
-- Edit contextual menu
+- Editor contextual menu
 
 ### Basic Copy Python Path
 
@@ -40,7 +40,7 @@ from module.name import (
 
 ## Miscellaneous
 
-Inspiration from the Sublime Package: https://github.com/Mimino666/SublimeText2-python-package-to-clipboard
+Inspiration from the Sublime Package: https://github.com/pokidovea/copy_python_path
 
 ## Credits
 

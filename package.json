@@ -16,6 +16,14 @@
       }
     ],
     "menus": {
+      "editor/title/context": [
+        {
+          "command": "extension.copyPythonPath",
+          "when": "resourceLangId == python",
+          "group": "1_cutcopypaste@30000",
+          "title": "Copy Python Path"
+        }
+      ],
       "editor/context": [
         {
           "command": "extension.copyPythonPath",
@@ -48,7 +56,7 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "description": "python path for current file.",
+  "description": "Python imports utils.",
   "displayName": "Python Path",
   "engines": {
     "vscode": "^1.22.0"
@@ -61,5 +69,5 @@
     "type": "git",
     "url": "https://github.com/mgesbert/vscode-python-path.git"
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
