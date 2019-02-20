@@ -38,7 +38,7 @@ function copyPythonPath(uri) {
     const pythonPath = getPythonPath(filePath);
     const selections = vscode.window.activeTextEditor.selections
       .map(s => vscode.window.activeTextEditor.document.getText(s))
-      .filter(s => !!s);
+      .filter(s => !!s && !s.includes("\n"));
     if (pythonPath && selections.length > 0) {
       const importStatement = generateImportStatement(pythonPath, selections);
       clipboardy.writeSync(importStatement);
@@ -52,19 +52,14 @@ function copyPythonPath(uri) {
 }
 
 function generateImportStatement(pythonPath, selections) {
-  let importPath = "";
   if (selections.length == 0) {
-    importPath = `import ${pythonPath}`;
+    return `import ${pythonPath}`;
   } else if (selections.length == 1) {
     const selection = selections[0];
-    importPath = `from ${pythonPath} import ${selection}`;
-  } else {
-    const selection = selections.map(s => `\t${s},`).join("\n");
-    importPath = `from ${pythonPath} import (\n${selection}\n)`;
+    return `from ${pythonPath} import ${selection}`;
   }
-  if (importPath) {
-    clipboardy.writeSync(importPath);
-  }
+  const selection = selections.map(s => `\t${s},`).join("\n");
+  return `from ${pythonPath} import (\n${selection}\n)`;
 }
 
 function activate(context) {
