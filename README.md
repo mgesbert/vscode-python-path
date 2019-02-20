@@ -9,6 +9,7 @@ This extension adds a set of tools which help you generate internal import state
 - Command
 - Explorer contextual menu
 - Editor contextual menu
+- Editor title contextual menu
 
 ### Basic Copy Python Path
 
