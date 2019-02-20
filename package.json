@@ -4,6 +4,9 @@
     "onCommand:extension.copyPythonPath",
     "onCommand:extension.generateImportStatement"
   ],
+  "author": {
+    "name": "Mathias Gesbert"
+  },
   "categories": [
     "Other"
   ],
@@ -16,18 +19,18 @@
       }
     ],
     "menus": {
-      "editor/title/context": [
-        {
-          "command": "extension.copyPythonPath",
-          "when": "resourceLangId == python",
-          "group": "1_cutcopypaste@30000",
-          "title": "Copy Python Path"
-        }
-      ],
       "editor/context": [
         {
           "command": "extension.copyPythonPath",
           "group": "9_cutcopypaste@30000",
+          "title": "Copy Python Path",
+          "when": "resourceLangId == python"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "extension.copyPythonPath",
+          "group": "1_cutcopypaste@30000",
           "title": "Copy Python Path",
           "when": "resourceLangId == python"
         }
@@ -42,9 +45,13 @@
       ]
     }
   },
+  "contributors": [
+    "Nicolas Faurie"
+  ],
   "dependencies": {
     "clipboardy": "^1.2.3"
   },
+  "description": "Python imports utils.",
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^7.0.43",
@@ -52,18 +59,13 @@
     "typescript": "^2.6.1",
     "vscode": "^1.1.6"
   },
-  "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
-  },
-  "description": "Python imports utils.",
   "displayName": "Python Path",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
   "galleryBanner": {
     "color": "#1e415e",
     "theme": "dark"
-  },
-  "engines": {
-    "vscode": "^1.22.0"
   },
   "icon": "images/icon.png",
   "main": "./extension",
@@ -73,5 +75,9 @@
     "type": "git",
     "url": "https://github.com/mgesbert/vscode-python-path.git"
   },
-  "version": "0.0.8"
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "version": "0.0.9"
 }
