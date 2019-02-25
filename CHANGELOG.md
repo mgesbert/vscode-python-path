@@ -1,3 +1,12 @@
+<a name="0.0.10"></a>
+
+## 0.0.10 (2019-02-25)
+
+### Bug Fixes
+
+- **config:** categories + keywords
+- **logo:** outline for white background context
+
 <a name="0.0.9"></a>
 
 ## 0.0.9 (2019-02-20)
