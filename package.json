@@ -8,7 +8,11 @@
     "name": "Mathias Gesbert"
   },
   "categories": [
-    "Other"
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other",
+    "Extension Packs"
   ],
   "contributes": {
     "commands": [
@@ -68,6 +72,12 @@
     "theme": "dark"
   },
   "icon": "images/icon.png",
+  "keywords": [
+    "import",
+    "export",
+    "python",
+    "generator"
+  ],
   "main": "./extension",
   "name": "python-path",
   "publisher": "mgesbert",
