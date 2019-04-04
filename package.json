@@ -89,5 +89,5 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "version": "0.0.10"
+  "version": "0.0.11"
 }
