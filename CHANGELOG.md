@@ -1,5 +1,11 @@
 <a name="0.0.11"></a>
 
+## 0.0.14 (2022-08-10)
+
+### Fixed
+
+- **license:** fixed license name
+
 ## 0.0.13 (2022-08-10)
 
 ### Added
