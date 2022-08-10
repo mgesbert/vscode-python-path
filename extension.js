@@ -41,10 +41,10 @@ function copyPythonPath(uri) {
       .filter(s => !!s && !s.includes("\n") && !s.trim().includes(" "));
     if (pythonPath && selections.length > 0) {
       const importStatement = generateImportStatement(pythonPath, selections);
-      clipboardy.writeSync(importStatement);
+      vscode.env.clipboard.writeText(importStatement);
     }
     if (pythonPath && selections.length == 0) {
-      clipboardy.writeSync(pythonPath);
+      vscode.env.clipboard.writeText(pythonPath);
     }
   } catch (e) {
     console.log(e);
