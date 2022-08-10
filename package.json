@@ -52,9 +52,6 @@
   "contributors": [
     "Nicolas Faurie"
   ],
-  "dependencies": {
-    "clipboardy": "^1.2.3"
-  },
   "description": "Python imports utils.",
   "devDependencies": {
     "@types/mocha": "^2.2.42",
@@ -89,5 +86,5 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "version": "0.0.11"
+  "version": "0.0.12"
 }

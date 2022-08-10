@@ -1,5 +1,11 @@
 <a name="0.0.11"></a>
 
+## 0.0.12 (2022-08-10)
+
+### Bug Fixes
+
+- **clipboard:** remove dependency to clipboardy, use vscode env clipboard
+
 ## 0.0.11 (2019-04-04)
 
 ### Improvements

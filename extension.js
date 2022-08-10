@@ -1,6 +1,5 @@
 const vscode = require("vscode");
 const fs = require("fs");
-const clipboardy = require("clipboardy");
 const path = require("path");
 
 function getPythonPath(filePath) {
