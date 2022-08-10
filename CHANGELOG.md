@@ -1,5 +1,11 @@
 <a name="0.0.11"></a>
 
+## 0.0.13 (2022-08-10)
+
+### Added
+
+- **license:** added MIT license
+
 ## 0.0.12 (2022-08-10)
 
 ### Bug Fixes

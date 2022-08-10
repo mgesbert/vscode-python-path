@@ -86,5 +86,5 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "version": "0.0.12"
+  "version": "0.0.13"
 }
